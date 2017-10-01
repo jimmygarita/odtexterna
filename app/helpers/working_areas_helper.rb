@@ -1,0 +1,2 @@
+module WorkingAreasHelper
+end

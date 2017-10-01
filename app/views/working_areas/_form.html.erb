@@ -1,0 +1,27 @@
+<%= form_for(working_area) do |f| %>
+  <% if working_area.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(working_area.errors.count, "error") %> prohibited this working_area from being saved:</h2>
+
+      <ul>
+      <% working_area.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :active %>
+    <%= f.check_box :active %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

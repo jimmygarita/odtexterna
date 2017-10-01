@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @working_area.name %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @working_area.active %>
+</p>
+
+<%= link_to 'Edit', edit_working_area_path(@working_area) %> |
+<%= link_to 'Back', working_areas_path %>

@@ -1,0 +1,37 @@
+<%= form_for(work_detail) do |f| %>
+  <% if work_detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(work_detail.errors.count, "error") %> prohibited this work_detail from being saved:</h2>
+
+      <ul>
+      <% work_detail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :media_name %>
+    <%= f.text_field :media_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :size %>
+    <%= f.text_field :size %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cost %>
+    <%= f.number_field :cost %>
+  </div>
+
+  <div class="field">
+    <%= f.label :details %>
+    <%= f.text_area :details %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  media_name: MyString
+  size: MyString
+  cost: 1
+  details: MyText
+
+two:
+  media_name: MyString
+  size: MyString
+  cost: 1
+  details: MyText

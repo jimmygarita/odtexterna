@@ -1,0 +1,2 @@
+class WorkingArea < ApplicationRecord
+end

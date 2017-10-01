@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Working Areas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Active</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @working_areas.each do |working_area| %>
+      <tr>
+        <td><%= working_area.name %></td>
+        <td><%= working_area.active %></td>
+        <td><%= link_to 'Show', working_area %></td>
+        <td><%= link_to 'Edit', edit_working_area_path(working_area) %></td>
+        <td><%= link_to 'Destroy', working_area, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Working Area', new_working_area_path %>
